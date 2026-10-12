@@ -43,6 +43,19 @@ jobs:
           grep -E "POLYFIELD|ERROR|Exception|Caused by|at com.bnnn" server.log | head -80 || true
           grep -q "POLYFIELD SELFTEST PASS" server.log
 
+      - name: Production server self-test (the shipped jar on a real Fabric server)
+        if: always()
+        run: |
+          mkdir -p prod/mods && cd prod
+          curl -sSfL -o server.jar "https://meta.fabricmc.net/v2/versions/loader/1.20.1/0.16.10/1.0.1/server/jar"
+          curl -sSfL -o mods/fabric-api.jar "https://maven.fabricmc.net/net/fabricmc/fabric-api/fabric-api/0.92.2+1.20.1/fabric-api-0.92.2+1.20.1.jar"
+          cp ../build/libs/polyfield-1.0.0.jar mods/
+          echo "eula=true" > eula.txt
+          timeout 900 java -Dpolyfield.selftest=true -Xmx2G -jar server.jar nogui > ../prod-server.log 2>&1 || true
+          cd ..
+          grep -E "POLYFIELD|ERROR|Exception|Caused by" prod-server.log | head -60 || true
+          grep -q "POLYFIELD SELFTEST PASS" prod-server.log
+
       - name: Client self-test (xvfb, software OpenGL)
         if: always()
         env:
@@ -60,7 +73,7 @@ jobs:
           mkdir -p ci-out
           cp build/libs/polyfield-*.jar ci-out/ 2>/dev/null || true
           rm -f ci-out/*-sources.jar
-          cp build.log server.log client.log ci-out/ 2>/dev/null || true
+          cp build.log server.log client.log prod-server.log ci-out/ 2>/dev/null || true
           cp run/screenshots/*.png ci-out/ 2>/dev/null || true
           cp -r run/crash-reports ci-out/ 2>/dev/null || true
           git config user.name "polyfield-ci"
