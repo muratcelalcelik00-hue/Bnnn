@@ -91,13 +91,17 @@ public class GunItemRenderer implements BuiltinItemRendererRegistry.DynamicItemR
         float side = left ? -1f : 1f;
         // vanilla puts the origin at (0.56, -0.52, -0.72) in view space; move the grip to a hip position
         Vector3f muzzle = m.anchor("muzzle", new Vector3f(0, 0.06f, m.max.z));
-        float sightY = muzzle.y + (weapon.kind == Weapon.Kind.LAUNCHER ? 0.09f : 0.035f);
-        float hipX = side * -0.2f;
-        float hipY = weapon.kind == Weapon.Kind.PISTOL ? 0.16f : 0.1f;
-        float hipZ = weapon.kind == Weapon.Kind.PISTOL ? -0.05f : 0.08f;
+        float sightY = m.anchor("sight", new Vector3f(0, muzzle.y + 0.035f, 0)).y;
+        if (weapon.kind == Weapon.Kind.LAUNCHER) {
+            sightY = Math.max(sightY, muzzle.y + 0.09f);
+        }
+        boolean pistol = weapon.kind == Weapon.Kind.PISTOL;
+        float hipX = side * -0.24f;
+        float hipY = pistol ? 0.2f : 0.16f;
+        float hipZ = pistol ? 0.0f : 0.12f;
         float adsX = side * -0.56f;
         float adsY = 0.52f - sightY;
-        float adsZ = weapon.kind == Weapon.Kind.PISTOL ? 0.05f : 0.22f;
+        float adsZ = 0.0f;
         matrices.translate(MathHelper.lerp(aim, hipX, adsX), MathHelper.lerp(aim, hipY, adsY), MathHelper.lerp(aim, hipZ, adsZ));
         // recoil: back and up
         matrices.translate(0, kick * 0.01f * weapon.recoilPitch * (1f - 0.5f * aim), kick * 0.012f * weapon.kick);

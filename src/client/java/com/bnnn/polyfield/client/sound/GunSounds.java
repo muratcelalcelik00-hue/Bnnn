@@ -46,7 +46,7 @@ public final class GunSounds {
             }
             loop.lastShot = 0;
         } else {
-            play(client, s.shot(), cat, shooter, 1.0f, pitch * (0.97f + shooter.getRandom().nextFloat() * 0.06f));
+            play(client, s.shot(), cat, shooter, 1.0f, pitch * (0.97f + client.world.random.nextFloat() * 0.06f));
             if (w.kind == Weapon.Kind.PISTOL || w.kind == Weapon.Kind.RIFLE) {
                 play(client, s.tail(), cat, shooter, 0.6f, pitch);
             }

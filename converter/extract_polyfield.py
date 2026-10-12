@@ -242,14 +242,20 @@ def weapon_model(roots, prop):
     else:  # grip at the lower rear third
         lo, hi = allv.min(0), allv.max(0)
         origin = np.array([(lo[0] + hi[0]) / 2, lo[1] + (hi[1] - lo[1]) * 0.6, lo[2] + (hi[2] - lo[2]) * 0.35])
-    origin[0] = (allv[:, 0].min() + allv[:, 0].max()) / 2
+    if not trig:
+        origin[0] = (allv[:, 0].min() + allv[:, 0].max()) / 2
     transform_parts(parts, origin, GUN_SCALE)
     allv = np.concatenate([p["v"] for p in parts])
     zmax = allv[:, 2].max()
     tip = allv[allv[:, 2] > zmax - 0.03]
+    muzzle = (float(tip[:, 0].mean()), float(tip[:, 1].mean()), float(zmax))
+    # line of sight: just over the receiver (between grip and 70 % of the barrel)
+    rec = allv[(allv[:, 2] > -0.05) & (allv[:, 2] < zmax * 0.7)]
+    sight_y = max(muzzle[1] + 0.035, (rec[:, 1].max() if len(rec) else muzzle[1]) + 0.012)
     anchors = {
         "grip": (0.0, 0.0, 0.0),
-        "muzzle": (float(tip[:, 0].mean()), float(tip[:, 1].mean()), float(zmax)),
+        "muzzle": muzzle,
+        "sight": (0.0, float(sight_y), 0.0),
         "stock": (0.0, 0.0, float(allv[:, 2].min())),
     }
     return parts, anchors
