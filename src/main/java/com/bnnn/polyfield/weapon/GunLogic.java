@@ -120,7 +120,7 @@ public final class GunLogic {
     }
 
     public static void tickBolt(LivingEntity e, ShooterState s) {
-        if (s.boltTicks > 0 && --s.boltTicks == 0 && s.boltWeapon != null) {
+        if (s.boltTicks > 0 && --s.boltTicks == 0 && s.boltWeapon != null && PfSounds.of(s.boltWeapon).bolt() != null) {
             e.getWorld().playSound(null, e.getX(), e.getY(), e.getZ(), PfSounds.of(s.boltWeapon).bolt(), category(e), 0.9f, 1.0f);
         }
     }

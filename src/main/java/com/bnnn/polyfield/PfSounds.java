@@ -52,7 +52,7 @@ public final class PfSounds {
         for (Weapon w : Weapon.values()) {
             String p = "weapon." + w.id + ".";
             WEAPONS.put(w, new WeaponSounds(register(p + "shot"), register(p + "tail"), register(p + "reload"),
-                    register(p + "bolt")));
+                    w.boltAction ? register(p + "bolt") : null));
         }
     }
 
