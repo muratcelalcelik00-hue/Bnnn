@@ -22,6 +22,9 @@ public final class ClientGunState {
     private static boolean sentTrigger;
     private static boolean sentAim;
     public static boolean aiming;
+    /** Overrides the attack key (client self-test only). */
+    @Nullable
+    public static Boolean forcedTrigger;
     private static float aim;
     private static float prevAim;
     private static float kick;
@@ -67,7 +70,8 @@ public final class ClientGunState {
         boolean free = client.currentScreen == null && client.getOverlay() == null;
         Weapon held = heldWeapon(p);
         boolean inTank = p.getVehicle() instanceof TankEntity;
-        boolean trigger = free && (held != null || inTank) && client.options.attackKey.isPressed();
+        boolean trigger = free && (held != null || inTank)
+                && (forcedTrigger != null ? forcedTrigger : client.options.attackKey.isPressed());
         if (trigger != sentTrigger) {
             sentTrigger = trigger;
             send(PfNetwork.TRIGGER, trigger);

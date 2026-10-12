@@ -16,6 +16,21 @@ repositories {
 loom {
     splitEnvironmentSourceSets()
 
+    runs {
+        // CI self-tests: gradle runServer -Pselftest / runClient -Pselftest
+        server {
+            if (project.hasProperty('selftest')) {
+                property 'polyfield.selftest', 'true'
+            }
+        }
+        client {
+            if (project.hasProperty('selftest')) {
+                property 'polyfield.selftest', 'true'
+                programArgs '--quickPlaySingleplayer', 'pftest'
+            }
+        }
+    }
+
     mods {
         "polyfield" {
             sourceSet sourceSets.main

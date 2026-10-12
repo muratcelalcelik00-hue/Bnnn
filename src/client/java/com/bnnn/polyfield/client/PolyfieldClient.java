@@ -73,6 +73,7 @@ public class PolyfieldClient implements ClientModInitializer {
         });
 
         WorldRenderEvents.LAST.register(Tracers::render);
+        ClientSelfTest.init();
         HudRenderCallback.EVENT.register(PfHud::render);
 
         ClientPlayNetworking.registerGlobalReceiver(PfNetwork.SHOT, (client, handler, buf, sender) -> {

@@ -1,0 +1,56 @@
+name: Build Polyfield mod
+
+on:
+  push:
+    branches: ['claude/**', 'main']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.10.2'
+
+      - name: Build (code only, no Polyfield assets)
+        run: gradle build --stacktrace --no-daemon
+
+      - name: Dedicated server self-test
+        run: |
+          mkdir -p run && echo "eula=true" > run/eula.txt
+          timeout 1200 gradle runServer -Pselftest --no-daemon > server.log 2>&1 || true
+          grep -E "POLYFIELD|ERROR|Exception" server.log | head -80
+          grep -q "POLYFIELD SELFTEST PASS" server.log
+
+      - name: Client self-test (xvfb, software OpenGL)
+        env:
+          LIBGL_ALWAYS_SOFTWARE: '1'
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq xvfb libgl1-mesa-dri mesa-utils > /dev/null
+          mkdir -p run/saves && rm -rf run/saves/pftest && cp -r run/world run/saves/pftest
+          timeout 1500 xvfb-run -a -s "-screen 0 1280x720x24" gradle runClient -Pselftest --no-daemon > client.log 2>&1 || true
+          grep -E "POLYFIELD|ERROR|Exception|Mixin" client.log | head -120
+          grep -q "POLYFIELD CLIENT SELFTEST PASS" client.log
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: polyfield-build
+          path: |
+            build/libs/*.jar
+            server.log
+            client.log
+            run/screenshots/*.png
+            run/crash-reports/*
