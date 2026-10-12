@@ -33,7 +33,7 @@ Fabric Loom: 1.7.4
 > Task :remapSourcesJar
 > Task :assemble
 > Task :build
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1791832871141.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1791833158243.json
 
-BUILD SUCCESSFUL in 1m 14s
+BUILD SUCCESSFUL in 1m 16s
 9 actionable tasks: 9 executed
