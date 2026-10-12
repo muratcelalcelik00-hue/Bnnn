@@ -1,0 +1,33 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+Fabric Loom: 1.7.4
+
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+
+> Task :compileClientJava
+/home/runner/work/Bnnn/Bnnn/src/client/java/com/bnnn/polyfield/client/sound/GunSounds.java:49: error: cannot find symbol
+            play(client, s.shot(), cat, shooter, 1.0f, pitch * (0.97f + shooter.getRandom().nextFloat() * 0.06f));
+                                                                               ^
+  symbol:   method getRandom()
+  location: variable shooter of type Entity
+1 error
+
+> Task :compileClientJava FAILED
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_4-1791832475329.json
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileClientJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 9s
+3 actionable tasks: 1 executed, 2 up-to-date
