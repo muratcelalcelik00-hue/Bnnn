@@ -34,6 +34,16 @@ Varlıklar olmadan da mod derlenir ve çalışır (modeller görünmez, sesler �
 
 Minecraft 1.20.1 + Fabric Loader ≥ 0.14.21 + Fabric API. Jar'ı `mods/` klasörüne koyun.
 
+## Polyfield haritası (Normandiya) Minecraft içinde
+
+Polyfield'ın Normandiya haritası (arazi, sahil, siperler, bunkerler, köy evleri, kirpi engelleri,
+Higgins botları) oyunun kendi modelleri ve dokularıyla çizilir; altına görünmez çarpışma blokları döşenir.
+
+1. Yeni bir dünya: **Süperdüz → "Boşluk" (The Void)** hazır ayarı, hileler açık.
+2. `/polyfield map build` — haritayı (0, 64, 0) çevresine kurar (~750×750 m, birkaç saniye sürer).
+3. `/polyfield map tp` — sahile (Müttefik çıkarması) ışınlar; `/polyfield map tp german` Alman tarafına.
+4. `/polyfield map battle` — bayraklara Alman timleri, sahile Müttefik askerleri ve bir Sherman koyar.
+
 ## Oyun kuralları ve komutlar
 
 | Kural | Varsayılan | Anlamı |
