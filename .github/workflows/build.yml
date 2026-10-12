@@ -33,7 +33,8 @@ jobs:
 
       - name: Compiler errors
         if: always()
-        run: grep -E "error:|warning: \[|FAILED|BUILD (SUCCESSFUL|FAILED)" -A3 build.log | head -150 || true
+        run: |
+          grep -E "error:|warning: \[|FAILED|BUILD (SUCCESSFUL|FAILED)" -A3 build.log | head -150 || true
 
       - name: Dedicated server self-test
         run: |
