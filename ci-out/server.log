@@ -13,8 +13,8 @@ Fabric Loom: 1.7.4
 > Task :configureLaunch
 
 > Task :runServer
-[19:54:25] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.20.1 with Fabric Loader 0.16.10
-[19:54:25] [main/INFO] (FabricLoader) Loading 46 mods:
+[20:00:42] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.20.1 with Fabric Loader 0.16.10
+[20:00:42] [main/INFO] (FabricLoader) Loading 46 mods:
 	- fabric-api 0.92.2+1.20.1
 	- fabric-api-base 0.4.31+1802ada577
 	- fabric-api-lookup-api-v1 1.6.36+1802ada577
@@ -61,14 +61,13 @@ Fabric Loom: 1.7.4
 	- minecraft 1.20.1
 	- mixinextras 0.4.1
 	- polyfield 1.0.0
-[19:54:25] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/home/runner/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=SERVER
-[19:54:25] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
-[19:54:25] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
-[19:54:25] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
-[19:54:26] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
-[19:54:33] [main/INFO] (polyfield) POLYFIELD SELFTEST armed
-[19:54:33] [main/INFO] (polyfield) Polyfield loaded: 16 weapons
-[19:54:33] [main/ERROR] (Minecraft) Failed to load properties from file: server.properties
+[20:00:42] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/home/runner/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=SERVER
+[20:00:42] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[20:00:42] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[20:00:43] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[20:00:50] [main/INFO] (polyfield) POLYFIELD SELFTEST armed
+[20:00:50] [main/INFO] (polyfield) Polyfield loaded: 16 weapons
+[20:00:50] [main/ERROR] (Minecraft) Failed to load properties from file: server.properties
 java.nio.file.NoSuchFileException: server.properties
 	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92) ~[?:?]
 	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106) ~[?:?]
@@ -86,79 +85,80 @@ java.nio.file.NoSuchFileException: server.properties
 	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74) ~[fabric-loader-0.16.10.jar:?]
 	at net.fabricmc.loader.impl.launch.knot.KnotServer.main(KnotServer.java:23) ~[fabric-loader-0.16.10.jar:?]
 	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) ~[dev-launch-injector-0.2.1+build.8.jar:?]
-[19:54:33] [main/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[19:54:35] [main/INFO] (Minecraft) Loaded 7 recipes
-[19:54:35] [main/INFO] (Minecraft) Loaded 1271 advancements
-[19:54:35] [main/INFO] (BiomeModificationImpl) Applied 84 biome modifications to 42 of 64 new biomes in 11.59 ms
-[19:54:35] [Server thread/INFO] (Minecraft) Starting minecraft server version 1.20.1
-[19:54:35] [Server thread/INFO] (Minecraft) Loading properties
-[19:54:35] [Server thread/INFO] (Minecraft) Default game type: SURVIVAL
-[19:54:35] [Server thread/INFO] (Minecraft) Generating keypair
-[19:54:36] [Server thread/INFO] (Minecraft) Starting Minecraft server on *:25565
-[19:54:36] [Server thread/INFO] (Minecraft) Using epoll channel type
-[19:54:36] [Server thread/INFO] (Minecraft) Preparing level "world"
-[19:54:41] [Server thread/INFO] (Minecraft) Preparing start region for dimension minecraft:overworld
-[19:54:42] [Worker-Main-2/INFO] (Minecraft) Preparing spawn area: 0%
-[19:54:42] [Worker-Main-2/INFO] (Minecraft) Preparing spawn area: 0%
-[19:54:42] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 0%
-[19:54:43] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 0%
-[19:54:43] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 0%
-[19:54:44] [Worker-Main-2/INFO] (Minecraft) Preparing spawn area: 1%
-[19:54:44] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 2%
-[19:54:45] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 3%
-[19:54:45] [Worker-Main-2/INFO] (Minecraft) Preparing spawn area: 4%
-[19:54:46] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 5%
-[19:54:46] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 6%
-[19:54:47] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 9%
-[19:54:47] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 10%
-[19:54:48] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 13%
-[19:54:48] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 15%
-[19:54:49] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 17%
-[19:54:49] [Worker-Main-2/INFO] (Minecraft) Preparing spawn area: 18%
-[19:54:50] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 21%
-[19:54:50] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 24%
-[19:54:51] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 25%
-[19:54:51] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 28%
-[19:54:52] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 31%
-[19:54:52] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 34%
-[19:54:53] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 35%
-[19:54:53] [Worker-Main-2/INFO] (Minecraft) Preparing spawn area: 38%
-[19:54:54] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 42%
-[19:54:54] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 45%
-[19:54:55] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 47%
-[19:54:55] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 51%
-[19:54:56] [Worker-Main-2/INFO] (Minecraft) Preparing spawn area: 55%
-[19:54:56] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 57%
-[19:54:57] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 60%
-[19:54:57] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 64%
-[19:54:58] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 68%
-[19:54:58] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 71%
-[19:54:59] [Worker-Main-2/INFO] (Minecraft) Preparing spawn area: 73%
-[19:54:59] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 77%
-[19:55:00] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 80%
-[19:55:00] [Worker-Main-2/INFO] (Minecraft) Preparing spawn area: 84%
-[19:55:01] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 86%
-[19:55:01] [Worker-Main-2/INFO] (Minecraft) Preparing spawn area: 89%
-[19:55:02] [Worker-Main-2/INFO] (Minecraft) Preparing spawn area: 93%
-[19:55:02] [Worker-Main-2/INFO] (Minecraft) Preparing spawn area: 98%
-[19:55:03] [Server thread/INFO] (Minecraft) Time elapsed: 21231 ms
-[19:55:03] [Server thread/INFO] (Minecraft) Done (26.849s)! For help, type "help"
-[19:55:04] [Server thread/INFO] (polyfield) POLYFIELD SELFTEST spawned 10 entities (0 failed)
-[19:55:05] [Server thread/INFO] (polyfield) POLYFIELD SELFTEST fired 16/16 weapons
-[19:55:06] [Server thread/INFO] (polyfield) POLYFIELD SELFTEST tank health 235.0
-[19:55:33] [Server thread/INFO] (polyfield) POLYFIELD SELFTEST soldiers alive after battle: 4
-[19:55:33] [Server thread/INFO] (polyfield) POLYFIELD SELFTEST PASS
-[19:55:33] [Server thread/INFO] (Minecraft) Stopping server
-[19:55:33] [Server thread/INFO] (Minecraft) Saving players
-[19:55:33] [Server thread/INFO] (Minecraft) Saving worlds
-[19:55:33] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
-[19:55:34] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
-[19:55:34] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
-[19:55:34] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (world): All chunks are saved
-[19:55:34] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[19:55:34] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[19:55:34] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage: All dimensions are saved
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_3-1791834855767.json
+[20:00:50] [main/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[20:00:52] [main/INFO] (Minecraft) Loaded 7 recipes
+[20:00:52] [main/INFO] (Minecraft) Loaded 1271 advancements
+[20:00:52] [main/INFO] (BiomeModificationImpl) Applied 84 biome modifications to 42 of 64 new biomes in 13.14 ms
+[20:00:52] [Server thread/INFO] (Minecraft) Starting minecraft server version 1.20.1
+[20:00:52] [Server thread/INFO] (Minecraft) Loading properties
+[20:00:52] [Server thread/INFO] (Minecraft) Default game type: SURVIVAL
+[20:00:52] [Server thread/INFO] (Minecraft) Generating keypair
+[20:00:53] [Server thread/INFO] (Minecraft) Starting Minecraft server on *:25565
+[20:00:53] [Server thread/INFO] (Minecraft) Using epoll channel type
+[20:00:53] [Server thread/INFO] (Minecraft) Preparing level "world"
+[20:00:58] [Server thread/INFO] (Minecraft) Preparing start region for dimension minecraft:overworld
+[20:00:59] [Worker-Main-2/INFO] (Minecraft) Preparing spawn area: 0%
+[20:00:59] [Worker-Main-2/INFO] (Minecraft) Preparing spawn area: 0%
+[20:00:59] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 0%
+[20:01:00] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 0%
+[20:01:00] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 0%
+[20:01:01] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 1%
+[20:01:01] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 1%
+[20:01:01] [Worker-Main-2/INFO] (Minecraft) Preparing spawn area: 2%
+[20:01:02] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 3%
+[20:01:02] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 4%
+[20:01:03] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 6%
+[20:01:03] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 8%
+[20:01:04] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 9%
+[20:01:04] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 11%
+[20:01:05] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 13%
+[20:01:05] [Worker-Main-2/INFO] (Minecraft) Preparing spawn area: 15%
+[20:01:06] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 17%
+[20:01:06] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 19%
+[20:01:07] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 22%
+[20:01:07] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 25%
+[20:01:08] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 27%
+[20:01:08] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 31%
+[20:01:09] [Worker-Main-2/INFO] (Minecraft) Preparing spawn area: 33%
+[20:01:09] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 36%
+[20:01:10] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 39%
+[20:01:10] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 42%
+[20:01:11] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 45%
+[20:01:12] [Worker-Main-2/INFO] (Minecraft) Preparing spawn area: 48%
+[20:01:12] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 51%
+[20:01:12] [Worker-Main-2/INFO] (Minecraft) Preparing spawn area: 54%
+[20:01:13] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 56%
+[20:01:13] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 58%
+[20:01:14] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 63%
+[20:01:14] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 66%
+[20:01:15] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 69%
+[20:01:15] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 72%
+[20:01:16] [Worker-Main-2/INFO] (Minecraft) Preparing spawn area: 75%
+[20:01:16] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 78%
+[20:01:17] [Worker-Main-3/INFO] (Minecraft) Preparing spawn area: 82%
+[20:01:17] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 85%
+[20:01:18] [Worker-Main-2/INFO] (Minecraft) Preparing spawn area: 87%
+[20:01:18] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 90%
+[20:01:19] [Worker-Main-2/INFO] (Minecraft) Preparing spawn area: 94%
+[20:01:19] [Worker-Main-1/INFO] (Minecraft) Preparing spawn area: 97%
+[20:01:20] [Server thread/INFO] (Minecraft) Time elapsed: 21757 ms
+[20:01:20] [Server thread/INFO] (Minecraft) Done (27.050s)! For help, type "help"
+[20:01:21] [Server thread/INFO] (polyfield) POLYFIELD SELFTEST spawned 10 entities (0 failed)
+[20:01:22] [Server thread/INFO] (polyfield) POLYFIELD SELFTEST fired 16/16 weapons
+[20:01:23] [Server thread/INFO] (polyfield) POLYFIELD SELFTEST tank health 235.0
+[20:01:50] [Server thread/INFO] (polyfield) POLYFIELD SELFTEST soldiers alive after battle: 4
+[20:01:50] [Server thread/INFO] (polyfield) POLYFIELD SELFTEST PASS
+[20:01:50] [Server thread/INFO] (Minecraft) Stopping server
+[20:01:50] [Server thread/INFO] (Minecraft) Saving players
+[20:01:50] [Server thread/INFO] (Minecraft) Saving worlds
+[20:01:51] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[20:01:51] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
+[20:01:51] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
+[20:01:51] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (world): All chunks are saved
+[20:01:51] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[20:01:51] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[20:01:51] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage: All dimensions are saved
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_3-1791835235454.json
 
-BUILD SUCCESSFUL in 1m 23s
+BUILD SUCCESSFUL in 1m 20s
 6 actionable tasks: 4 executed, 2 up-to-date
