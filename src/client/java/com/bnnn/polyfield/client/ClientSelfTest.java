@@ -85,7 +85,7 @@ public final class ClientSelfTest {
                     }
                     BlockPos tp = BlockPos.ofFloored(p.getX() - f.z * 8, p.getY(), p.getZ() + f.x * 8);
                     tank = PfEntities.SHERMAN.spawn(w, w.getTopPosition(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, tp), SpawnReason.COMMAND);
-                })
+                });
                 case 60 -> ClientGunState.forcedTrigger = Boolean.TRUE;
                 case 72 -> shot(c, "pf_1_firing");
                 case 100 -> ClientGunState.forcedTrigger = Boolean.FALSE;
