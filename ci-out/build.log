@@ -18,16 +18,9 @@ Fabric Loom: 1.7.4
 > Task :compileJava
 > Task :processResources
 > Task :classes
-
-> Task :compileClientJava FAILED
-/home/runner/work/Bnnn/Bnnn/src/client/java/com/bnnn/polyfield/client/sound/GunSounds.java:49: error: cannot find symbol
-            play(client, s.shot(), cat, shooter, 1.0f, pitch * (0.97f + shooter.getRandom().nextFloat() * 0.06f));
-                                                                               ^
-  symbol:   method getRandom()
-  location: variable shooter of type Entity
-1 error
-
+> Task :compileClientJava
 > Task :processClientResources
+> Task :jar
 > Task :processIncludeJars
 > Task :sourcesJar
 > Task :compileTestJava NO-SOURCE
@@ -36,18 +29,11 @@ Fabric Loom: 1.7.4
 > Task :test NO-SOURCE
 > Task :validateAccessWidener NO-SOURCE
 > Task :check UP-TO-DATE
+> Task :remapJar
 > Task :remapSourcesJar
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1791832399867.json
+> Task :assemble
+> Task :build
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1791832546014.json
 
-FAILURE: Build failed with an exception.
-
-* What went wrong:
-Execution failed for task ':compileClientJava'.
-> Compilation failed; see the compiler error output for details.
-
-* Try:
-> Run with --info option to get more log output.
-> Run with --scan to get full insights.
-
-BUILD FAILED in 1m 4s
-7 actionable tasks: 7 executed
+BUILD SUCCESSFUL in 1m 11s
+9 actionable tasks: 9 executed
