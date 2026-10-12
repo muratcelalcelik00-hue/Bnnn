@@ -116,7 +116,8 @@ def build(env, sfs, tex_store, out_dir):
     # ground texture (PNG written straight into the pack)
     tpath = os.path.join(out_dir, "assets", "polyfield", "textures", "pf", "map_terrain.png")
     os.makedirs(os.path.dirname(tpath), exist_ok=True)
-    terrain_texture(textures["ColorMap"].image, textures).save(tpath)
+    # a 256-colour palette keeps the 2048x2048 ground texture small (Minecraft reads palette PNGs)
+    terrain_texture(textures["ColorMap"].image, textures).quantize(256, dither=Image.Dither.NONE).save(tpath, optimize=True)
 
     S = np.diag([-1.0, 1.0, 1.0])
     prefab_cache = {}

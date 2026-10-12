@@ -443,7 +443,7 @@ def main():
         # the Normandy map (terrain + objects) and its collision data
         import map_normandy
         mparts, manchors = map_normandy.build(env, sfs, tex, out)
-        lo, hi = write_pfm(os.path.join(mdir, "map_normandy.pfm"), mparts, manchors, tex)
+        lo, hi = write_pfm(os.path.join(mdir, "map_normandy.pfm"), mparts, manchors, tex, max_tex=512)
         report["models"]["map_normandy"] = {"bounds": [lo.round(1).tolist(), hi.round(1).tolist()],
                                             "anchors": {k: np.round(v, 1).tolist() for k, v in manchors.items()}}
         if args.preview:
