@@ -70,9 +70,16 @@ public class PolyfieldClient implements ClientModInitializer {
         ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> {
             GunSounds.clear();
             Tracers.clear();
+            com.bnnn.polyfield.client.render.MapRenderer.clear();
         });
 
+        WorldRenderEvents.BEFORE_ENTITIES.register(com.bnnn.polyfield.client.render.MapRenderer::render);
         WorldRenderEvents.LAST.register(Tracers::render);
+        ClientPlayNetworking.registerGlobalReceiver(com.bnnn.polyfield.map.PfMap.STATE_PACKET, (client, handler, buf, sender) -> {
+            boolean on = buf.readBoolean();
+            int x = buf.readInt(), y = buf.readInt(), z = buf.readInt();
+            client.execute(() -> com.bnnn.polyfield.client.render.MapRenderer.setState(on, x, y, z));
+        });
         ClientSelfTest.init();
         HudRenderCallback.EVENT.register(PfHud::render);
 

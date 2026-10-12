@@ -177,7 +177,7 @@ def write_pfm(path, parts, anchors, textures, max_tex=1024):
             fh.write(struct.pack(">3f", *pos))
         fh.write(struct.pack(">i", len(parts)))
         for p in parts:
-            write_utf(fh, textures.get(p.get("texobj"), max_tex))
+            write_utf(fh, p.get("texture_path") or textures.get(p.get("texobj"), max_tex))
             fh.write(struct.pack(">4f", *p["rgba"]))
             fh.write(struct.pack(">B", p.get("group", 0)))
             v, n, uv = p["v"], p["n"], p["uv"]
@@ -439,6 +439,18 @@ def main():
         lo, hi = write_pfm(os.path.join(mdir, "higgins_boat.pfm"), parts, {}, tex)
         report["models"]["higgins_boat"] = {"bounds": [lo.round(3).tolist(), hi.round(3).tolist()]}
         preview("higgins_boat", parts)
+
+        # the Normandy map (terrain + objects) and its collision data
+        import map_normandy
+        mparts, manchors = map_normandy.build(env, sfs, tex, out)
+        lo, hi = write_pfm(os.path.join(mdir, "map_normandy.pfm"), mparts, manchors, tex)
+        report["models"]["map_normandy"] = {"bounds": [lo.round(1).tolist(), hi.round(1).tolist()],
+                                            "anchors": {k: np.round(v, 1).tolist() for k, v in manchors.items()}}
+        if args.preview:
+            from preview import render
+            for p in mparts:
+                p["tex"] = None
+            previews.append(("map_normandy", render(mparts, 768, yaw=0, pitch=60)))
 
         # sounds
         clips = {}

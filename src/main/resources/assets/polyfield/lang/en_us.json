@@ -1,5 +1,12 @@
 {
+ "block.polyfield.collider": "Polyfield Map Ground",
  "category.polyfield": "Polyfield",
+ "command.polyfield.map.busy": "The map is already being built",
+ "command.polyfield.map.done": "Normandy is ready! /polyfield map tp to land on the beach, /polyfield map battle for a fight",
+ "command.polyfield.map.missing": "Map data missing: run converter/extract_polyfield.py on your Polyfield copy",
+ "command.polyfield.map.not_built": "Build the map first: /polyfield map build",
+ "command.polyfield.map.progress": "Map: %s%%",
+ "command.polyfield.map.started": "Building Polyfield's Normandy map at Y=%s (use a Superflat 'The Void' world)...",
  "command.polyfield.squad": "Spawned %s soldiers",
  "death.attack.polyfield.bullet": "%1$s was shot",
  "death.attack.polyfield.bullet.item": "%1$s was shot by %2$s using %3$s",

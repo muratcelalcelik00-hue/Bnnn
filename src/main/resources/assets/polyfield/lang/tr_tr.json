@@ -1,5 +1,12 @@
 {
+ "block.polyfield.collider": "Polyfield Harita Zemini",
  "category.polyfield": "Polyfield",
+ "command.polyfield.map.busy": "Harita zaten inşa ediliyor",
+ "command.polyfield.map.done": "Normandiya hazır! Sahile çıkmak için /polyfield map tp, savaş için /polyfield map battle",
+ "command.polyfield.map.missing": "Harita verisi yok: converter/extract_polyfield.py'yi Polyfield kopyanda çalıştır",
+ "command.polyfield.map.not_built": "Önce haritayı kur: /polyfield map build",
+ "command.polyfield.map.progress": "Harita: %%%s",
+ "command.polyfield.map.started": "Polyfield Normandiya haritası Y=%s seviyesinde kuruluyor (Süperdüz 'Boşluk' dünyası önerilir)...",
  "command.polyfield.squad": "%s asker çağrıldı",
  "death.attack.polyfield.bullet": "%1$s vuruldu",
  "death.attack.polyfield.bullet.item": "%1$s, %2$s tarafından %3$s ile vuruldu",

@@ -20,7 +20,7 @@ def main(jar, assets, out):
             for f in files:
                 full = os.path.join(root, f)
                 rel = os.path.relpath(full, assets).replace(os.sep, "/")
-                if not rel.startswith("assets/") or rel in existing:
+                if not rel.startswith(("assets/", "data/")) or rel in existing:
                     continue
                 z.write(full, rel)
                 added += 1

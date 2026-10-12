@@ -22,6 +22,11 @@ public final class PfCommands {
     public static void init() {
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> dispatcher.register(
                 CommandManager.literal("polyfield").requires(src -> src.hasPermissionLevel(2))
+                        .then(CommandManager.literal("map")
+                                .then(CommandManager.literal("build").executes(ctx -> com.bnnn.polyfield.map.PfMap.build(ctx.getSource())))
+                                .then(CommandManager.literal("tp").executes(ctx -> com.bnnn.polyfield.map.PfMap.teleport(ctx.getSource(), "SpawnPoint_Red"))
+                                        .then(CommandManager.literal("german").executes(ctx -> com.bnnn.polyfield.map.PfMap.teleport(ctx.getSource(), "SpawnPoint_Blue"))))
+                                .then(CommandManager.literal("battle").executes(ctx -> com.bnnn.polyfield.map.PfMap.battle(ctx.getSource()))))
                         .then(CommandManager.literal("squad")
                                 .then(CommandManager.literal("german")
                                         .executes(ctx -> squad(ctx, PfEntities.GERMAN_SOLDIER, 4))

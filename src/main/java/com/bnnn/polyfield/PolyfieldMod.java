@@ -28,6 +28,7 @@ public class PolyfieldMod implements ModInitializer {
         PfItems.init();
         PfNetwork.init();
         GunLogic.init();
+        com.bnnn.polyfield.map.PfMap.init();
         PfCommands.init();
         SelfTest.init();
         LOGGER.info("Polyfield loaded: {} weapons", com.bnnn.polyfield.weapon.Weapon.values().length);
