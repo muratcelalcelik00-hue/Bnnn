@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "polyfield",
+  "version": "${version}",
+  "name": "Polyfield",
+  "description": "Polyfield's WWII weapons, soldiers and tanks with the game's own models and sounds. Guns fire, R reloads, German and Allied soldiers spawn as enemies and shoot back. Models and sounds are converted from your own copy of Polyfield.",
+  "authors": ["muratcelalcelik00-hue"],
+  "contact": {},
+  "license": "MIT (code only; Polyfield assets belong to their owner)",
+  "icon": "assets/polyfield/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.bnnn.polyfield.PolyfieldMod"],
+    "client": ["com.bnnn.polyfield.client.PolyfieldClient"]
+  },
+  "mixins": [
+    {
+      "config": "polyfield.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  }
+}

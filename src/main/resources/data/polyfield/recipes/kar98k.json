@@ -1,0 +1,27 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "equipment",
+ "pattern": [
+  "III",
+  " XG",
+  " PP"
+ ],
+ "key": {
+  "G": {
+   "item": "minecraft:gunpowder"
+  },
+  "I": {
+   "item": "minecraft:iron_ingot"
+  },
+  "P": {
+   "tag": "minecraft:planks"
+  },
+  "X": {
+   "item": "minecraft:flint"
+  }
+ },
+ "result": {
+  "item": "polyfield:kar98k",
+  "count": 1
+ }
+}

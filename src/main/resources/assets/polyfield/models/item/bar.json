@@ -1,0 +1,6 @@
+{
+ "parent": "builtin/entity",
+ "textures": {
+  "particle": "minecraft:item/iron_ingot"
+ }
+}

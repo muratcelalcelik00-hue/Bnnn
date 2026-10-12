@@ -1,0 +1,27 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "equipment",
+ "pattern": [
+  "III",
+  "RTG",
+  "  I"
+ ],
+ "key": {
+  "G": {
+   "item": "minecraft:gunpowder"
+  },
+  "I": {
+   "item": "minecraft:iron_ingot"
+  },
+  "R": {
+   "item": "minecraft:redstone"
+  },
+  "T": {
+   "item": "minecraft:tnt"
+  }
+ },
+ "result": {
+  "item": "polyfield:bazooka",
+  "count": 1
+ }
+}

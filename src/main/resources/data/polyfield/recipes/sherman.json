@@ -1,0 +1,24 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "equipment",
+ "pattern": [
+  "IBI",
+  "BRB",
+  "BBB"
+ ],
+ "key": {
+  "B": {
+   "item": "minecraft:iron_block"
+  },
+  "I": {
+   "item": "minecraft:iron_ingot"
+  },
+  "R": {
+   "item": "minecraft:redstone"
+  }
+ },
+ "result": {
+  "item": "polyfield:sherman",
+  "count": 1
+ }
+}

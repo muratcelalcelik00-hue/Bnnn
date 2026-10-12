@@ -1,0 +1,24 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "equipment",
+ "pattern": [
+  "  T",
+  " P ",
+  "I  "
+ ],
+ "key": {
+  "I": {
+   "item": "minecraft:iron_ingot"
+  },
+  "P": {
+   "tag": "minecraft:planks"
+  },
+  "T": {
+   "item": "minecraft:tnt"
+  }
+ },
+ "result": {
+  "item": "polyfield:panzerfaust",
+  "count": 1
+ }
+}

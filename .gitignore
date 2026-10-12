@@ -1,0 +1,17 @@
+# Gradle / IDE
+.gradle/
+build/
+out/
+run/
+*.iml
+.idea/
+.vscode/
+bin/
+
+# Converted Polyfield assets: generated from the user's own copy, never commit
+polyfield-assets/
+*.apks
+*.apk
+*.7z
+*.7z.*
+__pycache__/

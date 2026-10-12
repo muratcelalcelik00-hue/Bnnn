@@ -1,0 +1,23 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "equipment",
+ "pattern": [
+  "II ",
+  " XG"
+ ],
+ "key": {
+  "G": {
+   "item": "minecraft:gunpowder"
+  },
+  "I": {
+   "item": "minecraft:iron_ingot"
+  },
+  "X": {
+   "item": "minecraft:copper_ingot"
+  }
+ },
+ "result": {
+  "item": "polyfield:m1915",
+  "count": 1
+ }
+}

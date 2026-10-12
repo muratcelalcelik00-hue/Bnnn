@@ -1,0 +1,27 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "equipment",
+ "pattern": [
+  "III",
+  " XG",
+  " PP"
+ ],
+ "key": {
+  "G": {
+   "item": "minecraft:gunpowder"
+  },
+  "I": {
+   "item": "minecraft:iron_ingot"
+  },
+  "P": {
+   "tag": "minecraft:planks"
+  },
+  "X": {
+   "item": "minecraft:copper_ingot"
+  }
+ },
+ "result": {
+  "item": "polyfield:m1_garand",
+  "count": 1
+ }
+}
